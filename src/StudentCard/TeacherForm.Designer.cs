@@ -88,6 +88,7 @@
             this.label2.Size = new System.Drawing.Size(60, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Семестр";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -156,12 +157,12 @@
             this.button3.Text = "Вихід";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // Form3
+            // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1004, 726);
+            this.ClientSize = new System.Drawing.Size(1004, 724);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -177,7 +178,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form3";
+            this.Name = "TeacherForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teacher Form";

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentCard
 {
-    public partial class TeacherForm : Form
+    public partial class DeanForm : Form
     {
-        public TeacherForm()
+        public DeanForm()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
