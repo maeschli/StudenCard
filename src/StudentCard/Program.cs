@@ -16,7 +16,7 @@ namespace StudentCard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DeanForm());
+            Application.Run(new WelcomeForm());
         }
     }
 }

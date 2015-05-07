@@ -39,6 +39,7 @@ namespace StudentCard
         {
             if (textBox2.Text.Length == 0)
             {
+                textBox2.PasswordChar = '\0';
                 textBox2.Text = "Введіть свій пароль...";
                 textBox2.ForeColor = SystemColors.GrayText;
             }
@@ -94,7 +95,7 @@ namespace StudentCard
 
         private void button3_Click(object sender, EventArgs e)
         {
-   
+            this.Close();
         }
     }
 }
