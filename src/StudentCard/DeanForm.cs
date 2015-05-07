@@ -19,7 +19,7 @@ namespace StudentCard
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -16,50 +16,50 @@ namespace StudentCard
         {
             InitializeComponent();
 
-            textBox1.ForeColor = SystemColors.GrayText;
-            textBox1.Text = "Введіть свій логін...";
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            loginTextBox.ForeColor = SystemColors.GrayText;
+            loginTextBox.Text = "Введіть свій логін...";
+            this.loginTextBox.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.loginTextBox.Enter += new System.EventHandler(this.textBox1_Enter);
 
-            textBox2.ForeColor = SystemColors.GrayText;
-            textBox2.Text = "Введіть свій пароль...";
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            passwordTextBox.ForeColor = SystemColors.GrayText;
+            passwordTextBox.Text = "Введіть свій пароль...";
+            this.passwordTextBox.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.passwordTextBox.Enter += new System.EventHandler(this.textBox2_Enter);
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length == 0)
+            if (loginTextBox.Text.Length == 0)
             {
-                textBox1.Text = "Введіть свій логін...";
-                textBox1.ForeColor = SystemColors.GrayText;
+                loginTextBox.Text = "Введіть свій логін...";
+                loginTextBox.ForeColor = SystemColors.GrayText;
             }
         }
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text.Length == 0)
+            if (passwordTextBox.Text.Length == 0)
             {
-                textBox2.PasswordChar = '\0';
-                textBox2.Text = "Введіть свій пароль...";
-                textBox2.ForeColor = SystemColors.GrayText;
+                passwordTextBox.PasswordChar = '\0';
+                passwordTextBox.Text = "Введіть свій пароль...";
+                passwordTextBox.ForeColor = SystemColors.GrayText;
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Введіть свій логін...")
+            if (loginTextBox.Text == "Введіть свій логін...")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = SystemColors.WindowText;
+                loginTextBox.Text = "";
+                loginTextBox.ForeColor = SystemColors.WindowText;
             }
         }
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "Введіть свій пароль...")
+            if (passwordTextBox.Text == "Введіть свій пароль...")
             {
-                textBox2.Text = "";
-                textBox2.ForeColor = SystemColors.WindowText;
-                textBox2.PasswordChar = '*';
+                passwordTextBox.Text = "";
+                passwordTextBox.ForeColor = SystemColors.WindowText;
+                passwordTextBox.PasswordChar = '*';
             }
         }
 
@@ -93,9 +93,39 @@ namespace StudentCard
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            //this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnterButton_Click(object sender, EventArgs e)
+        {
+            if (userComboBox.Text == "Студент"){
+                StudentForm form = new StudentForm();
+                form.Show();
+                this.Hide();
+            }
+            else if (userComboBox.Text == "Викладач") {
+                TeacherForm form = new TeacherForm();
+                form.Show();
+                this.Hide();
+            }
+            else if (userComboBox.Text == "Кафедра"){
+                ChairForm form = new ChairForm();
+                form.Show();
+                this.Hide();
+            }
+            else if (userComboBox.Text == "Деканат"){
+                DeanForm form = new DeanForm();
+                form.Show();
+                this.Hide();
+            }
         }
     }
 }

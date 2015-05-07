@@ -22,9 +22,9 @@ namespace StudentCard
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
