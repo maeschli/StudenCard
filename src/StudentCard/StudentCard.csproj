@@ -50,6 +50,7 @@
     <Compile Include="DeanForm.Designer.cs">
       <DependentUpon>DeanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>

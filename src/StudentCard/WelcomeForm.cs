@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -106,26 +108,56 @@ namespace StudentCard
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            if (userComboBox.Text == "Студент"){
-                StudentForm form = new StudentForm();
-                form.Show();
-                this.Hide();
+            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+            Connect.Open();
+            SqlCommand commLoginPass = new SqlCommand("SELECT * from SingIn WHERE Login = '" + loginTextBox.Text + "' AND Password = '" + passwordTextBox.Text + "' AND Ролі = '" + userComboBox.Text + "'", Connect);
+            SqlDataReader readLoginPass;
+            readLoginPass = commLoginPass.ExecuteReader();
+
+            int count = 0;
+            while (readLoginPass.Read()) {
+                count += 1;
+                Global.usercode = readLoginPass.GetInt32(0);
             }
-            else if (userComboBox.Text == "Викладач") {
-                TeacherForm form = new TeacherForm();
-                form.Show();
-                this.Hide();
-            }
-            else if (userComboBox.Text == "Кафедра"){
-                ChairForm form = new ChairForm();
-                form.Show();
-                this.Hide();
-            }
-            else if (userComboBox.Text == "Деканат"){
-                DeanForm form = new DeanForm();
-                form.Show();
-                this.Hide();
-            }
+
+                if (count != 0)
+                {
+                    if (userComboBox.Text == "Студент")
+                    {
+                        StudentForm form = new StudentForm();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else if (userComboBox.Text == "Викладач")
+                    {
+                        TeacherForm form = new TeacherForm();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else if (userComboBox.Text == "Кафедра")
+                    {
+                        ChairForm form = new ChairForm();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else if (userComboBox.Text == "Деканат")
+                    {
+                        DeanForm form = new DeanForm();
+                        form.Show();
+                        this.Hide();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Ви ввели неправильне ім'я користувача чи пароль!\nПеревірте також, будь ласка, свою роль та чи не натиснута часом клавіша 'Caps Lock'.\n\nВведіть свої дані ще раз!");
+                    loginTextBox.Clear();
+                    passwordTextBox.Clear();
+
+                }
+
+            Connect.Close();
+            
         }
     }
 }

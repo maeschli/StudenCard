@@ -85,9 +85,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Семестр";
+            this.label2.Text = "Група";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -95,9 +95,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 18);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Група";
+            this.label3.Text = "Семестр";
             // 
             // comboBox3
             // 
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(984, 694);
+            this.ClientSize = new System.Drawing.Size(980, 690);
             this.ControlBox = false;
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.button2);
