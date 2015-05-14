@@ -108,7 +108,7 @@ namespace StudentCard
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            SqlConnection Connect = new SqlConnection("Data Source=TATIANA;Initial Catalog=StudentCard;Integrated Security=True");
+            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect.Open();
             SqlCommand commLoginPass = new SqlCommand("SELECT * from SingIn WHERE Login = '" + loginTextBox.Text + "' AND Password = '" + passwordTextBox.Text + "' AND Ролі = '" + userComboBox.Text + "'", Connect);
             SqlDataReader readLoginPass;

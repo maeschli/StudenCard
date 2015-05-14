@@ -17,7 +17,7 @@ namespace StudentCard
         public StudentForm()
         {
             InitializeComponent();
-            SqlConnection Connect = new SqlConnection("Data Source=TATIANA;Initial Catalog=StudentCard;Integrated Security=True");
+            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect.Open();
             SqlCommand commStData = new SqlCommand("SELECT * from StudentSemesters WHERE Код = '" + Global.usercode + "'", Connect);
             SqlDataReader readStData;
