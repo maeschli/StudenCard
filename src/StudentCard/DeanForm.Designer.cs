@@ -28,40 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.userName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.semestrComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.studentComboBox = new System.Windows.Forms.ComboBox();
+            this.groupComboBox = new System.Windows.Forms.ComboBox();
+            this.watchStMarks = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gridPanel = new System.Windows.Forms.Panel();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.gridPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // userName
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 760);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(26, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userName.Location = new System.Drawing.Point(26, 30);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(79, 33);
+            this.userName.TabIndex = 2;
+            this.userName.Text = "label1";
             // 
             // label4
             // 
@@ -72,13 +65,14 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Семестр";
             // 
-            // comboBox3
+            // semestrComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(30, 243);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(211, 26);
-            this.comboBox3.TabIndex = 12;
+            this.semestrComboBox.FormattingEnabled = true;
+            this.semestrComboBox.Location = new System.Drawing.Point(30, 243);
+            this.semestrComboBox.Name = "semestrComboBox";
+            this.semestrComboBox.Size = new System.Drawing.Size(211, 26);
+            this.semestrComboBox.TabIndex = 12;
+            this.semestrComboBox.SelectedIndexChanged += new System.EventHandler(this.semestrComboBox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -98,34 +92,37 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Група";
             // 
-            // comboBox2
+            // studentComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(31, 185);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(211, 26);
-            this.comboBox2.TabIndex = 9;
+            this.studentComboBox.FormattingEnabled = true;
+            this.studentComboBox.Location = new System.Drawing.Point(31, 185);
+            this.studentComboBox.Name = "studentComboBox";
+            this.studentComboBox.Size = new System.Drawing.Size(211, 26);
+            this.studentComboBox.TabIndex = 9;
+            this.studentComboBox.SelectedIndexChanged += new System.EventHandler(this.studentComboBox_SelectedIndexChanged);
             // 
-            // comboBox1
+            // groupComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(30, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 26);
-            this.comboBox1.TabIndex = 8;
+            this.groupComboBox.FormattingEnabled = true;
+            this.groupComboBox.Location = new System.Drawing.Point(30, 127);
+            this.groupComboBox.Name = "groupComboBox";
+            this.groupComboBox.Size = new System.Drawing.Size(211, 26);
+            this.groupComboBox.TabIndex = 8;
+            this.groupComboBox.SelectedIndexChanged += new System.EventHandler(this.groupComboBox_SelectedIndexChanged);
             // 
-            // button1
+            // watchStMarks
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(30, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Переглянути";
-            this.button1.UseVisualStyleBackColor = false;
+            this.watchStMarks.BackColor = System.Drawing.SystemColors.Control;
+            this.watchStMarks.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchStMarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchStMarks.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchStMarks.Location = new System.Drawing.Point(30, 341);
+            this.watchStMarks.Name = "watchStMarks";
+            this.watchStMarks.Size = new System.Drawing.Size(211, 30);
+            this.watchStMarks.TabIndex = 14;
+            this.watchStMarks.Text = "Переглянути";
+            this.watchStMarks.UseVisualStyleBackColor = false;
+            this.watchStMarks.Click += new System.EventHandler(this.watchStMarks_Click);
             // 
             // ExitButton
             // 
@@ -143,23 +140,67 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Location = new System.Drawing.Point(0, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 1);
+            this.panel1.TabIndex = 17;
+            // 
+            // gridPanel
+            // 
+            this.gridPanel.Controls.Add(this.dataGridView);
+            this.gridPanel.Location = new System.Drawing.Point(280, 95);
+            this.gridPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.gridPanel.Name = "gridPanel";
+            this.gridPanel.Size = new System.Drawing.Size(692, 590);
+            this.gridPanel.TabIndex = 16;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.Size = new System.Drawing.Size(692, 590);
+            this.dataGridView.TabIndex = 0;
+            // 
             // DeanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(984, 694);
+            this.ClientSize = new System.Drawing.Size(984, 692);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gridPanel);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.watchStMarks);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.semestrComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.studentComboBox);
+            this.Controls.Add(this.groupComboBox);
+            this.Controls.Add(this.userName);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -167,7 +208,9 @@
             this.Name = "DeanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeanForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.DeanForm_Load);
+            this.gridPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,15 +218,17 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox semestrComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox studentComboBox;
+        private System.Windows.Forms.ComboBox groupComboBox;
+        private System.Windows.Forms.Button watchStMarks;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel gridPanel;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
