@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.userName = new System.Windows.Forms.Label();
             this.groupComboBox = new System.Windows.Forms.ComboBox();
             this.semestrComboBox = new System.Windows.Forms.ComboBox();
@@ -36,22 +36,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lessonComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.watchButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 760);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(695, 678);
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // userName
             // 
@@ -71,11 +75,12 @@
             this.groupComboBox.Name = "groupComboBox";
             this.groupComboBox.Size = new System.Drawing.Size(211, 26);
             this.groupComboBox.TabIndex = 2;
+            this.groupComboBox.SelectedIndexChanged += new System.EventHandler(this.groupComboBox_SelectedIndexChanged);
             // 
             // semestrComboBox
             // 
             this.semestrComboBox.FormattingEnabled = true;
-            this.semestrComboBox.Location = new System.Drawing.Point(30, 185);
+            this.semestrComboBox.Location = new System.Drawing.Point(29, 250);
             this.semestrComboBox.Name = "semestrComboBox";
             this.semestrComboBox.Size = new System.Drawing.Size(211, 26);
             this.semestrComboBox.TabIndex = 3;
@@ -93,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 164);
+            this.label3.Location = new System.Drawing.Point(27, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 5;
@@ -102,7 +107,7 @@
             // lessonComboBox
             // 
             this.lessonComboBox.FormattingEnabled = true;
-            this.lessonComboBox.Location = new System.Drawing.Point(29, 243);
+            this.lessonComboBox.Location = new System.Drawing.Point(29, 189);
             this.lessonComboBox.Name = "lessonComboBox";
             this.lessonComboBox.Size = new System.Drawing.Size(211, 26);
             this.lessonComboBox.TabIndex = 6;
@@ -111,24 +116,25 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 222);
+            this.label4.Location = new System.Drawing.Point(27, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Предмет";
             // 
-            // button1
+            // watchButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(30, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Переглянути";
-            this.button1.UseVisualStyleBackColor = false;
+            this.watchButton.BackColor = System.Drawing.SystemColors.Control;
+            this.watchButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchButton.Location = new System.Drawing.Point(30, 341);
+            this.watchButton.Name = "watchButton";
+            this.watchButton.Size = new System.Drawing.Size(211, 30);
+            this.watchButton.TabIndex = 8;
+            this.watchButton.Text = "Переглянути";
+            this.watchButton.UseVisualStyleBackColor = false;
+            this.watchButton.Click += new System.EventHandler(this.watchButton_Click);
             // 
             // button2
             // 
@@ -159,16 +165,26 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView);
+            this.panel1.Location = new System.Drawing.Point(274, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(695, 678);
+            this.panel1.TabIndex = 11;
+            // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(976, 686);
+            this.ClientSize = new System.Drawing.Size(968, 678);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.watchButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lessonComboBox);
             this.Controls.Add(this.label3);
@@ -176,7 +192,6 @@
             this.Controls.Add(this.semestrComboBox);
             this.Controls.Add(this.groupComboBox);
             this.Controls.Add(this.userName);
-            this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -185,7 +200,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teacher Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +209,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label userName;
         private System.Windows.Forms.ComboBox groupComboBox;
         private System.Windows.Forms.ComboBox semestrComboBox;
@@ -201,8 +217,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox lessonComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button watchButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

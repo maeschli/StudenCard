@@ -9,6 +9,5 @@ namespace StudentCard
     class Global
     {
         public static int usercode;
-        public static string lesson;
     }
 }
