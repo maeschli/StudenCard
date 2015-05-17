@@ -74,5 +74,11 @@ namespace StudentCard
         {
 
         }
+
+        private void watchInfo_Click(object sender, EventArgs e)
+        {
+            StudentInfo form = new StudentInfo();
+            form.Show();
+        }
     }
 }

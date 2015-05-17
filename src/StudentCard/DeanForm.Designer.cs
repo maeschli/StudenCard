@@ -41,6 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridPanel = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.watchInfo = new System.Windows.Forms.Button();
             this.gridPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +121,7 @@
             this.watchStMarks.Name = "watchStMarks";
             this.watchStMarks.Size = new System.Drawing.Size(211, 30);
             this.watchStMarks.TabIndex = 14;
-            this.watchStMarks.Text = "Переглянути";
+            this.watchStMarks.Text = "Переглянути оцінки";
             this.watchStMarks.UseVisualStyleBackColor = false;
             this.watchStMarks.Click += new System.EventHandler(this.watchStMarks_Click);
             // 
@@ -183,6 +184,20 @@
             this.dataGridView.Size = new System.Drawing.Size(692, 590);
             this.dataGridView.TabIndex = 0;
             // 
+            // watchInfo
+            // 
+            this.watchInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchInfo.Location = new System.Drawing.Point(30, 387);
+            this.watchInfo.Name = "watchInfo";
+            this.watchInfo.Size = new System.Drawing.Size(211, 30);
+            this.watchInfo.TabIndex = 18;
+            this.watchInfo.Text = "Переглянути інформацію";
+            this.watchInfo.UseVisualStyleBackColor = false;
+            this.watchInfo.Click += new System.EventHandler(this.watchInfo_Click);
+            // 
             // DeanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -190,6 +205,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 692);
             this.ControlBox = false;
+            this.Controls.Add(this.watchInfo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridPanel);
             this.Controls.Add(this.ExitButton);
@@ -230,5 +246,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel gridPanel;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button watchInfo;
     }
 }

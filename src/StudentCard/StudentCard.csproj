@@ -51,6 +51,12 @@
       <DependentUpon>DeanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="StudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInfo.Designer.cs">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DeanForm.resx">
       <DependentUpon>DeanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInfo.resx">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>

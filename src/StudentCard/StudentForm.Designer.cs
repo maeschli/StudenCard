@@ -38,6 +38,7 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.gridPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.watchInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.gridPanel.SuspendLayout();
             this.SuspendLayout();
@@ -104,11 +105,11 @@
             this.watchData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.watchData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.watchData.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.watchData.Location = new System.Drawing.Point(29, 177);
+            this.watchData.Location = new System.Drawing.Point(29, 214);
             this.watchData.Name = "watchData";
             this.watchData.Size = new System.Drawing.Size(211, 30);
             this.watchData.TabIndex = 4;
-            this.watchData.Text = "Переглянути";
+            this.watchData.Text = "Переглянути оцінки";
             this.watchData.UseVisualStyleBackColor = false;
             this.watchData.Click += new System.EventHandler(this.watchData_Click);
             // 
@@ -118,7 +119,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(29, 225);
+            this.button2.Location = new System.Drawing.Point(29, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 30);
             this.button2.TabIndex = 5;
@@ -133,7 +134,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ExitButton.Location = new System.Drawing.Point(29, 356);
+            this.ExitButton.Location = new System.Drawing.Point(29, 560);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(211, 34);
             this.ExitButton.TabIndex = 6;
@@ -159,13 +160,28 @@
             this.panel1.Size = new System.Drawing.Size(1000, 1);
             this.panel1.TabIndex = 8;
             // 
+            // watchInfo
+            // 
+            this.watchInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchInfo.Location = new System.Drawing.Point(29, 261);
+            this.watchInfo.Name = "watchInfo";
+            this.watchInfo.Size = new System.Drawing.Size(211, 30);
+            this.watchInfo.TabIndex = 9;
+            this.watchInfo.Text = "Переглянути інформацію";
+            this.watchInfo.UseVisualStyleBackColor = false;
+            this.watchInfo.Click += new System.EventHandler(this.watchInfo_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(984, 692);
+            this.ClientSize = new System.Drawing.Size(980, 688);
             this.ControlBox = false;
+            this.Controls.Add(this.watchInfo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridPanel);
             this.Controls.Add(this.ExitButton);
@@ -200,5 +216,6 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel gridPanel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button watchInfo;
     }
 }

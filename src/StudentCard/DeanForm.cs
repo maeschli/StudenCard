@@ -47,6 +47,7 @@ namespace StudentCard
 
             while (readData.Read()) {
                 semestrComboBox.Items.Clear();
+                Global.studentcode = readData.GetInt32(0);
 
                 for (int i = 0; i < 11; i++)
                 {
@@ -112,6 +113,12 @@ namespace StudentCard
         private void semestrComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void watchInfo_Click(object sender, EventArgs e)
+        {
+            StudentInfo form = new StudentInfo();
+            form.Show();
         }
     }
 }
