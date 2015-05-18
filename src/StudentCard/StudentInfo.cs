@@ -30,9 +30,15 @@ namespace StudentCard
 
                 if (role == "Студент")
                 {
+                    saveButton.Hide();
                     Student("SELECT * from StudentInfo WHERE Код = '" + Global.usercode + "'");
                 }
                 else if (role == "Деканат")
+                {
+                    saveButton.Hide();
+                    Student("SELECT * from StudentInfo WHERE Код = '" + Global.studentcode + "'");
+                }
+                else if (role == "Кафедра")
                 {
                     Student("SELECT * from StudentInfo WHERE Код = '" + Global.studentcode + "'");
                 }
@@ -43,8 +49,6 @@ namespace StudentCard
 
         private void Student(string command)
         {
-            saveButton.Hide();
-
             SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect.Open();
             SqlCommand comm = new SqlCommand(command, Connect);

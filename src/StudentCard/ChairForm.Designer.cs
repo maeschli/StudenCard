@@ -28,60 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.userName = new System.Windows.Forms.Label();
+            this.groupComboBox = new System.Windows.Forms.ComboBox();
+            this.studComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.watchInfo = new System.Windows.Forms.Button();
+            this.watchMarks = new System.Windows.Forms.Button();
+            this.semestrComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 760);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(274, 0);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(750, 760);
+            this.dataGridView.TabIndex = 0;
             // 
-            // label1
+            // userName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(26, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userName.Location = new System.Drawing.Point(26, 43);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(53, 23);
+            this.userName.TabIndex = 1;
+            this.userName.Text = "label1";
             // 
-            // comboBox1
+            // groupComboBox
             // 
-            this.comboBox1.DropDownWidth = 211;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 26);
-            this.comboBox1.TabIndex = 2;
+            this.groupComboBox.DropDownWidth = 211;
+            this.groupComboBox.FormattingEnabled = true;
+            this.groupComboBox.Location = new System.Drawing.Point(29, 127);
+            this.groupComboBox.Name = "groupComboBox";
+            this.groupComboBox.Size = new System.Drawing.Size(211, 26);
+            this.groupComboBox.TabIndex = 2;
+            this.groupComboBox.SelectedIndexChanged += new System.EventHandler(this.groupComboBox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // studComboBox
             // 
-            this.comboBox2.DropDownWidth = 211;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(30, 185);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(211, 26);
-            this.comboBox2.TabIndex = 3;
+            this.studComboBox.DropDownWidth = 211;
+            this.studComboBox.FormattingEnabled = true;
+            this.studComboBox.Location = new System.Drawing.Point(30, 185);
+            this.studComboBox.Name = "studComboBox";
+            this.studComboBox.Size = new System.Drawing.Size(211, 26);
+            this.studComboBox.TabIndex = 3;
+            this.studComboBox.SelectedIndexChanged += new System.EventHandler(this.studComboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -102,45 +104,47 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Студент";
             // 
-            // button1
+            // watchInfo
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(30, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Переглянути дані";
-            this.button1.UseVisualStyleBackColor = false;
+            this.watchInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchInfo.Location = new System.Drawing.Point(30, 255);
+            this.watchInfo.Name = "watchInfo";
+            this.watchInfo.Size = new System.Drawing.Size(211, 30);
+            this.watchInfo.TabIndex = 9;
+            this.watchInfo.Text = "Переглянути дані";
+            this.watchInfo.UseVisualStyleBackColor = false;
+            this.watchInfo.Click += new System.EventHandler(this.watchInfo_Click);
             // 
-            // button2
+            // watchMarks
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(29, 510);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Переглянути оцінки";
-            this.button2.UseVisualStyleBackColor = false;
+            this.watchMarks.BackColor = System.Drawing.SystemColors.Control;
+            this.watchMarks.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.watchMarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchMarks.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchMarks.Location = new System.Drawing.Point(28, 413);
+            this.watchMarks.Name = "watchMarks";
+            this.watchMarks.Size = new System.Drawing.Size(211, 30);
+            this.watchMarks.TabIndex = 10;
+            this.watchMarks.Text = "Переглянути оцінки";
+            this.watchMarks.UseVisualStyleBackColor = false;
+            this.watchMarks.Click += new System.EventHandler(this.watchMarks_Click);
             // 
-            // comboBox4
+            // semestrComboBox
             // 
-            this.comboBox4.DropDownWidth = 211;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(30, 442);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(211, 26);
-            this.comboBox4.TabIndex = 11;
+            this.semestrComboBox.DropDownWidth = 211;
+            this.semestrComboBox.FormattingEnabled = true;
+            this.semestrComboBox.Location = new System.Drawing.Point(29, 365);
+            this.semestrComboBox.Name = "semestrComboBox";
+            this.semestrComboBox.Size = new System.Drawing.Size(211, 26);
+            this.semestrComboBox.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 421);
+            this.label5.Location = new System.Drawing.Point(26, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 12;
@@ -168,7 +172,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(29, 301);
+            this.button4.Location = new System.Drawing.Point(28, 460);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(211, 30);
             this.button4.TabIndex = 14;
@@ -180,20 +184,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(980, 690);
+            this.ClientSize = new System.Drawing.Size(968, 678);
             this.ControlBox = false;
             this.Controls.Add(this.button4);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.semestrComboBox);
+            this.Controls.Add(this.watchMarks);
+            this.Controls.Add(this.watchInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.studComboBox);
+            this.Controls.Add(this.groupComboBox);
+            this.Controls.Add(this.userName);
+            this.Controls.Add(this.dataGridView);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -203,7 +207,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KafedraForm";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,15 +215,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Label userName;
+        private System.Windows.Forms.ComboBox groupComboBox;
+        private System.Windows.Forms.ComboBox studComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button watchInfo;
+        private System.Windows.Forms.Button watchMarks;
+        private System.Windows.Forms.ComboBox semestrComboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button button4;

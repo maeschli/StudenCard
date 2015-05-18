@@ -103,6 +103,8 @@ namespace StudentCard
                 dataGridView.Columns[3].Visible = false;
             }
 
+            Connect.Close();
+
         }
 
         private void DeanForm_Load(object sender, EventArgs e)
