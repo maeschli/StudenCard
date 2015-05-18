@@ -130,7 +130,7 @@
             this.watchButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.watchButton.Location = new System.Drawing.Point(30, 341);
             this.watchButton.Name = "watchButton";
-            this.watchButton.Size = new System.Drawing.Size(211, 30);
+            this.watchButton.Size = new System.Drawing.Size(211, 34);
             this.watchButton.TabIndex = 8;
             this.watchButton.Text = "Переглянути";
             this.watchButton.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(30, 387);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 30);
+            this.button2.Size = new System.Drawing.Size(211, 34);
             this.button2.TabIndex = 9;
             this.button2.Text = "Зберегти зміни";
             this.button2.UseVisualStyleBackColor = false;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(968, 678);
+            this.ClientSize = new System.Drawing.Size(964, 674);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);

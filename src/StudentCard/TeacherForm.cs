@@ -53,6 +53,7 @@ namespace StudentCard
 
             while (readData.Read())
             {
+                semestrComboBox.Items.Clear();
                 for (int i = 0; i < 11; i++) {
                     if (readData.GetValue(4 + i).ToString() == "1")
                         semestrComboBox.Items.Add("Семестр " + (i + 1) + "");
@@ -66,6 +67,7 @@ namespace StudentCard
 
         private void groupComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lessonComboBox.Items.Clear();
             SqlConnection Connect2 = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect2.Open();
             SqlCommand commData2 = new SqlCommand("SELECT * from TeacherLessons WHERE Код = '" + Global.usercode + "' AND Група = '" + groupComboBox.SelectedItem + "'", Connect2);

@@ -17,6 +17,7 @@ namespace StudentCard
         public StudentForm()
         {
             InitializeComponent();
+            printToWord.Hide();
             SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect.Open();
             SqlCommand commStData = new SqlCommand("SELECT * from StudentSemesters WHERE Код = '" + Global.usercode + "'", Connect);
@@ -79,6 +80,11 @@ namespace StudentCard
         {
             StudentInfo form = new StudentInfo();
             form.Show();
+        }
+
+        private void printToWord_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

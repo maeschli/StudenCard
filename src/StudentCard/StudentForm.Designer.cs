@@ -34,7 +34,7 @@
             this.comboSemester = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.watchData = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.printToWord = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.gridPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -113,18 +113,19 @@
             this.watchData.UseVisualStyleBackColor = false;
             this.watchData.Click += new System.EventHandler(this.watchData_Click);
             // 
-            // button2
+            // printToWord
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(29, 307);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Вивести у MS Word";
-            this.button2.UseVisualStyleBackColor = false;
+            this.printToWord.BackColor = System.Drawing.SystemColors.Control;
+            this.printToWord.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.printToWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printToWord.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.printToWord.Location = new System.Drawing.Point(29, 307);
+            this.printToWord.Name = "printToWord";
+            this.printToWord.Size = new System.Drawing.Size(211, 30);
+            this.printToWord.TabIndex = 5;
+            this.printToWord.Text = "Вивести у MS Word";
+            this.printToWord.UseVisualStyleBackColor = false;
+            this.printToWord.Click += new System.EventHandler(this.printToWord_Click);
             // 
             // ExitButton
             // 
@@ -179,13 +180,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(980, 688);
+            this.ClientSize = new System.Drawing.Size(976, 684);
             this.ControlBox = false;
             this.Controls.Add(this.watchInfo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridPanel);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.printToWord);
             this.Controls.Add(this.watchData);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboSemester);
@@ -212,7 +213,7 @@
         private System.Windows.Forms.ComboBox comboSemester;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button watchData;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button printToWord;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel gridPanel;
         private System.Windows.Forms.Panel panel1;

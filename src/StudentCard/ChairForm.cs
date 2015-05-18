@@ -118,5 +118,34 @@ namespace StudentCard
             }
             Connect.Close();
         }
+
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+            Connect.Open();
+            SqlDataAdapter adaptStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Connect);
+
+            using (adaptStData)
+            {
+                SqlConnection Conn = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+                Conn.Open();
+                SqlDataAdapter adStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Conn);
+                
+                /*DataTable t = new DataTable();
+                adaptStData.Fill(t);
+
+                dataGridView.AutoSize = true;
+
+                dataGridView.DataSource = t;
+
+                dataGridView.Columns[0].Visible = false;
+                dataGridView.Columns[1].Visible = false;
+                dataGridView.Columns[2].Visible = false;
+                dataGridView.Columns[3].Visible = false;*/
+
+                Conn.Close();
+            }
+            Connect.Close();
+        }
     }
 }

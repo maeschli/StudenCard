@@ -39,7 +39,7 @@
             this.semestrComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.saveChanges = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             this.watchInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.watchInfo.Location = new System.Drawing.Point(30, 255);
             this.watchInfo.Name = "watchInfo";
-            this.watchInfo.Size = new System.Drawing.Size(211, 30);
+            this.watchInfo.Size = new System.Drawing.Size(211, 34);
             this.watchInfo.TabIndex = 9;
             this.watchInfo.Text = "Переглянути дані";
             this.watchInfo.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             this.watchMarks.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.watchMarks.Location = new System.Drawing.Point(28, 413);
             this.watchMarks.Name = "watchMarks";
-            this.watchMarks.Size = new System.Drawing.Size(211, 30);
+            this.watchMarks.Size = new System.Drawing.Size(211, 34);
             this.watchMarks.TabIndex = 10;
             this.watchMarks.Text = "Переглянути оцінки";
             this.watchMarks.UseVisualStyleBackColor = false;
@@ -166,18 +166,19 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button4
+            // saveChanges
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(28, 460);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(211, 30);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Зберегти зміни";
-            this.button4.UseVisualStyleBackColor = false;
+            this.saveChanges.BackColor = System.Drawing.SystemColors.Control;
+            this.saveChanges.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChanges.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveChanges.Location = new System.Drawing.Point(28, 460);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(211, 34);
+            this.saveChanges.TabIndex = 14;
+            this.saveChanges.Text = "Зберегти зміни";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
             // ChairForm
             // 
@@ -186,7 +187,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(968, 678);
             this.ControlBox = false;
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.semestrComboBox);
@@ -226,6 +227,6 @@
         private System.Windows.Forms.ComboBox semestrComboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button saveChanges;
     }
 }
