@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.userName = new System.Windows.Forms.Label();
             this.groupComboBox = new System.Windows.Forms.ComboBox();
             this.studComboBox = new System.Windows.Forms.ComboBox();
@@ -42,19 +41,11 @@
             this.saveChanges = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.addStudent = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(274, 0);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(750, 760);
-            this.dataGridView.TabIndex = 0;
             // 
             // userName
             // 
@@ -212,13 +203,34 @@
             this.addStudent.UseVisualStyleBackColor = false;
             this.addStudent.Click += new System.EventHandler(this.addStudent_Click);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(710, 692);
+            this.dataGridView.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView);
+            this.panel1.Location = new System.Drawing.Point(274, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(710, 692);
+            this.panel1.TabIndex = 17;
+            // 
             // ChairForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(960, 670);
+            this.ClientSize = new System.Drawing.Size(984, 692);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.addStudent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveChanges);
@@ -232,7 +244,6 @@
             this.Controls.Add(this.studComboBox);
             this.Controls.Add(this.groupComboBox);
             this.Controls.Add(this.userName);
-            this.Controls.Add(this.dataGridView);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -243,6 +254,7 @@
             this.Text = "KafedraForm";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,7 +262,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label userName;
         private System.Windows.Forms.ComboBox groupComboBox;
         private System.Windows.Forms.ComboBox studComboBox;
@@ -264,5 +275,7 @@
         private System.Windows.Forms.Button saveChanges;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addStudent;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Panel panel1;
     }
 }

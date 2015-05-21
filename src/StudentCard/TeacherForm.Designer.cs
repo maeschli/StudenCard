@@ -54,7 +54,7 @@
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(695, 678);
+            this.dataGridView.Size = new System.Drawing.Size(711, 691);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
@@ -173,7 +173,7 @@
             this.panel1.Location = new System.Drawing.Point(274, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 678);
+            this.panel1.Size = new System.Drawing.Size(711, 691);
             this.panel1.TabIndex = 11;
             // 
             // label1
@@ -196,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(960, 670);
+            this.ClientSize = new System.Drawing.Size(984, 692);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
