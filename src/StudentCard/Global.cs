@@ -10,5 +10,6 @@ namespace StudentCard
     {
         public static int usercode;
         public static int studentcode;
+        public static int newstudent;
     }
 }

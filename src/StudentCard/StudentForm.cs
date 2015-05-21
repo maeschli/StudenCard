@@ -86,5 +86,10 @@ namespace StudentCard
         {
 
         }
+
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

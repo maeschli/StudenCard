@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(976, 684);
+            this.ClientSize = new System.Drawing.Size(972, 680);
             this.ControlBox = false;
             this.Controls.Add(this.watchInfo);
             this.Controls.Add(this.panel1);
@@ -199,6 +199,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Form";
+            this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.gridPanel.ResumeLayout(false);
             this.ResumeLayout(false);

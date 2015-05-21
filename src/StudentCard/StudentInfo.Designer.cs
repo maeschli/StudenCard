@@ -55,6 +55,7 @@
             this.enterDatePicker = new System.Windows.Forms.TextBox();
             this.leaveDatePicker = new System.Windows.Forms.TextBox();
             this.birthDatePicker = new System.Windows.Forms.TextBox();
+            this.saveStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -337,6 +338,20 @@
             this.birthDatePicker.Size = new System.Drawing.Size(405, 26);
             this.birthDatePicker.TabIndex = 16;
             // 
+            // saveStudent
+            // 
+            this.saveStudent.BackColor = System.Drawing.SystemColors.Control;
+            this.saveStudent.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.saveStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveStudent.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveStudent.Location = new System.Drawing.Point(697, 529);
+            this.saveStudent.Name = "saveStudent";
+            this.saveStudent.Size = new System.Drawing.Size(211, 34);
+            this.saveStudent.TabIndex = 14;
+            this.saveStudent.Text = "Зберегти введені дані";
+            this.saveStudent.UseVisualStyleBackColor = false;
+            this.saveStudent.Click += new System.EventHandler(this.saveStudent_Click);
+            // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -344,6 +359,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 692);
             this.ControlBox = false;
+            this.Controls.Add(this.saveStudent);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.groupBox1);
@@ -397,5 +413,6 @@
         private System.Windows.Forms.TextBox enterDatePicker;
         private System.Windows.Forms.TextBox birthDatePicker;
         private System.Windows.Forms.TextBox leaveDatePicker;
+        private System.Windows.Forms.Button saveStudent;
     }
 }

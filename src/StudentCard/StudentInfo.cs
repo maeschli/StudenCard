@@ -31,20 +31,29 @@ namespace StudentCard
                 if (role == "Студент")
                 {
                     saveButton.Hide();
+                    saveStudent.Hide();
                     Student("SELECT * from StudentInfo WHERE Код = '" + Global.usercode + "'");
                 }
                 else if (role == "Деканат")
                 {
                     saveButton.Hide();
+                    saveStudent.Hide();
                     Student("SELECT * from StudentInfo WHERE Код = '" + Global.studentcode + "'");
                 }
                 else if (role == "Кафедра")
                 {
+                    saveStudent.Hide();
                     Student("SELECT * from StudentInfo WHERE Код = '" + Global.studentcode + "'");
                 }
             }
 
             Connect.Close();
+        }
+
+        public StudentInfo(int newcode) {
+            InitializeComponent();
+            saveButton.Hide();
+            Global.newstudent = newcode;
         }
 
         private void Student(string command)
@@ -140,6 +149,34 @@ namespace StudentCard
                 MessageBox.Show(exceptionObj.Message.ToString());
             }
             
+
+        }
+
+        private void saveStudent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+                Connect.Open();
+                SqlCommand comm = new SqlCommand("INSERT INTO StudentInfo (Код, Група, ПІБ, [Дата народження], [Рік зарахування], [Рік випуску], [Напрям підготовки], Спеціальність, [Осв-кв рівень], [Форма навчання])" +
+                    "VALUES('" + Global.newstudent + "', @group, @name, @birth, @enter, @leave, @direct, @spec, @level, @form)", Connect);
+                comm.Parameters.Add("@group", SqlDbType.VarChar).Value = groupTextBox.Text;
+                comm.Parameters.AddWithValue("@name", SqlDbType.VarChar).Value = nameTextBox.Text;
+                comm.Parameters.AddWithValue("@direct", SqlDbType.VarChar).Value = directTextBox.Text;
+                comm.Parameters.AddWithValue("@spec", SqlDbType.VarChar).Value = specTextBox.Text;
+                comm.Parameters.AddWithValue("@form", SqlDbType.VarChar).Value = formTextBox.Text;
+                comm.Parameters.AddWithValue("@level", SqlDbType.VarChar).Value = levelTextBox.Text;
+                comm.Parameters.AddWithValue("@birth", SqlDbType.DateTime).Value = birthDatePicker.Text;
+                comm.Parameters.AddWithValue("@enter", SqlDbType.DateTime).Value = enterDatePicker.Text;
+                comm.Parameters.AddWithValue("@leave", SqlDbType.DateTime).Value = leaveDatePicker.Text;
+                comm.ExecuteNonQuery();
+                Connect.Close();
+                MessageBox.Show("Студента успішно внесено до бази!");
+            }
+            catch (Exception exceptionObj)
+            {
+                MessageBox.Show(exceptionObj.Message.ToString());
+            }
 
         }
     }

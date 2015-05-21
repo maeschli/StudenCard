@@ -146,5 +146,21 @@ namespace StudentCard
         {
 
         }
+
+        private void addStudent_Click(object sender, EventArgs e)
+        {
+            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+            Connect.Open();
+            SqlCommand comm = new SqlCommand("SELECT * from StudentInfo", Connect);
+            SqlDataReader readStData = comm.ExecuteReader();
+            int count = 0;
+            while (readStData.Read()) {
+                count = readStData.GetInt32(0);
+            }
+            
+            Connect.Close();
+            StudentInfo form = new StudentInfo(count + 1);
+            form.Show();
+        }
     }
 }

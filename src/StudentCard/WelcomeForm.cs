@@ -159,5 +159,10 @@ namespace StudentCard
             Connect.Close();
             
         }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
