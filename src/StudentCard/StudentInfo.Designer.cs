@@ -38,23 +38,23 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.enterTextBox = new System.Windows.Forms.TextBox();
-            this.birthTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.leaveTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.formTextBox = new System.Windows.Forms.TextBox();
+            this.levelTextBox = new System.Windows.Forms.TextBox();
+            this.groupTextBox = new System.Windows.Forms.TextBox();
+            this.specTextBox = new System.Windows.Forms.TextBox();
+            this.directTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.directTextBox = new System.Windows.Forms.TextBox();
-            this.specTextBox = new System.Windows.Forms.TextBox();
-            this.groupTextBox = new System.Windows.Forms.TextBox();
-            this.levelTextBox = new System.Windows.Forms.TextBox();
-            this.formTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.enterDatePicker = new System.Windows.Forms.TextBox();
+            this.leaveDatePicker = new System.Windows.Forms.TextBox();
+            this.birthDatePicker = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -160,20 +160,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Дата випуску:";
             // 
-            // enterTextBox
-            // 
-            this.enterTextBox.Location = new System.Drawing.Point(172, 32);
-            this.enterTextBox.Name = "enterTextBox";
-            this.enterTextBox.Size = new System.Drawing.Size(405, 26);
-            this.enterTextBox.TabIndex = 9;
-            // 
-            // birthTextBox
-            // 
-            this.birthTextBox.Location = new System.Drawing.Point(172, 115);
-            this.birthTextBox.Name = "birthTextBox";
-            this.birthTextBox.Size = new System.Drawing.Size(405, 26);
-            this.birthTextBox.TabIndex = 10;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -186,15 +172,11 @@
             this.label7.Text = "Дата народження:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // leaveTextBox
-            // 
-            this.leaveTextBox.Location = new System.Drawing.Point(172, 73);
-            this.leaveTextBox.Name = "leaveTextBox";
-            this.leaveTextBox.Size = new System.Drawing.Size(405, 26);
-            this.leaveTextBox.TabIndex = 12;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.birthDatePicker);
+            this.groupBox1.Controls.Add(this.enterDatePicker);
+            this.groupBox1.Controls.Add(this.leaveDatePicker);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -206,16 +188,103 @@
             this.groupBox1.Controls.Add(this.specTextBox);
             this.groupBox1.Controls.Add(this.directTextBox);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.birthTextBox);
-            this.groupBox1.Controls.Add(this.leaveTextBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.enterTextBox);
             this.groupBox1.Location = new System.Drawing.Point(51, 288);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(599, 378);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(31, 336);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(136, 23);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Форма навчання:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(18, 295);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(269, 23);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Освітньо-кваліфікаційний рівень:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(44, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(122, 23);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Спеціальність:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(106, 252);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 23);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Група:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(3, 161);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(163, 23);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Напрям підготовки:";
+            // 
+            // formTextBox
+            // 
+            this.formTextBox.Location = new System.Drawing.Point(172, 333);
+            this.formTextBox.Name = "formTextBox";
+            this.formTextBox.Size = new System.Drawing.Size(405, 26);
+            this.formTextBox.TabIndex = 17;
+            // 
+            // levelTextBox
+            // 
+            this.levelTextBox.Location = new System.Drawing.Point(293, 292);
+            this.levelTextBox.Name = "levelTextBox";
+            this.levelTextBox.Size = new System.Drawing.Size(284, 26);
+            this.levelTextBox.TabIndex = 16;
+            // 
+            // groupTextBox
+            // 
+            this.groupTextBox.Location = new System.Drawing.Point(172, 249);
+            this.groupTextBox.Name = "groupTextBox";
+            this.groupTextBox.Size = new System.Drawing.Size(405, 26);
+            this.groupTextBox.TabIndex = 15;
+            // 
+            // specTextBox
+            // 
+            this.specTextBox.Location = new System.Drawing.Point(172, 202);
+            this.specTextBox.Name = "specTextBox";
+            this.specTextBox.Size = new System.Drawing.Size(405, 26);
+            this.specTextBox.TabIndex = 14;
+            // 
+            // directTextBox
+            // 
+            this.directTextBox.Location = new System.Drawing.Point(172, 158);
+            this.directTextBox.Name = "directTextBox";
+            this.directTextBox.Size = new System.Drawing.Size(405, 26);
+            this.directTextBox.TabIndex = 13;
             // 
             // closeButton
             // 
@@ -247,95 +316,26 @@
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // directTextBox
+            // enterDatePicker
             // 
-            this.directTextBox.Location = new System.Drawing.Point(172, 158);
-            this.directTextBox.Name = "directTextBox";
-            this.directTextBox.Size = new System.Drawing.Size(405, 26);
-            this.directTextBox.TabIndex = 13;
+            this.enterDatePicker.Location = new System.Drawing.Point(172, 29);
+            this.enterDatePicker.Name = "enterDatePicker";
+            this.enterDatePicker.Size = new System.Drawing.Size(405, 26);
+            this.enterDatePicker.TabIndex = 14;
             // 
-            // specTextBox
+            // leaveDatePicker
             // 
-            this.specTextBox.Location = new System.Drawing.Point(172, 202);
-            this.specTextBox.Name = "specTextBox";
-            this.specTextBox.Size = new System.Drawing.Size(405, 26);
-            this.specTextBox.TabIndex = 14;
+            this.leaveDatePicker.Location = new System.Drawing.Point(172, 71);
+            this.leaveDatePicker.Name = "leaveDatePicker";
+            this.leaveDatePicker.Size = new System.Drawing.Size(405, 26);
+            this.leaveDatePicker.TabIndex = 15;
             // 
-            // groupTextBox
+            // birthDatePicker
             // 
-            this.groupTextBox.Location = new System.Drawing.Point(172, 249);
-            this.groupTextBox.Name = "groupTextBox";
-            this.groupTextBox.Size = new System.Drawing.Size(405, 26);
-            this.groupTextBox.TabIndex = 15;
-            // 
-            // levelTextBox
-            // 
-            this.levelTextBox.Location = new System.Drawing.Point(293, 292);
-            this.levelTextBox.Name = "levelTextBox";
-            this.levelTextBox.Size = new System.Drawing.Size(284, 26);
-            this.levelTextBox.TabIndex = 16;
-            // 
-            // formTextBox
-            // 
-            this.formTextBox.Location = new System.Drawing.Point(172, 333);
-            this.formTextBox.Name = "formTextBox";
-            this.formTextBox.Size = new System.Drawing.Size(405, 26);
-            this.formTextBox.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(3, 161);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 23);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Напрям підготовки:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(106, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 23);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Група:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(44, 205);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 23);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Спеціальність:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(18, 295);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(269, 23);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Освітньо-кваліфікаційний рівень:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(31, 336);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 23);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Форма навчання:";
+            this.birthDatePicker.Location = new System.Drawing.Point(172, 115);
+            this.birthDatePicker.Name = "birthDatePicker";
+            this.birthDatePicker.Size = new System.Drawing.Size(405, 26);
+            this.birthDatePicker.TabIndex = 16;
             // 
             // StudentInfo
             // 
@@ -380,10 +380,7 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox enterTextBox;
-        private System.Windows.Forms.TextBox birthTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox leaveTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button saveButton;
@@ -397,5 +394,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox enterDatePicker;
+        private System.Windows.Forms.TextBox birthDatePicker;
+        private System.Windows.Forms.TextBox leaveDatePicker;
     }
 }

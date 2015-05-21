@@ -58,9 +58,10 @@ namespace StudentCard
             while (readData.Read())
             {
                 nameTextBox.Text = "" + readData.GetValue(2) + "";
-                enterTextBox.Text = "" + readData.GetValue(4) + "";
-                leaveTextBox.Text = "" + readData.GetValue(5) + "";
-                birthTextBox.Text = "" + readData.GetValue(3) + "";
+                //enterDatePicker.Text = "" + readData.GetValue(4) + "";
+                enterDatePicker.Text = ""+ readData.GetValue(4)+"";
+                leaveDatePicker.Text = ""+ readData.GetValue(5) + "";
+                birthDatePicker.Text = "" + readData.GetValue(3) + "";
                 directTextBox.Text = "" + readData.GetValue(6) + "";
                 specTextBox.Text = "" + readData.GetValue(7) + "";
                 groupTextBox.Text = "" + readData.GetValue(1) + "";
@@ -113,6 +114,32 @@ namespace StudentCard
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+                Connect.Open();
+                SqlCommand comm = new SqlCommand("UPDATE StudentInfo SET Група = @group, ПІБ = @name," +
+                   "[Дата народження] = @birth, [Рік зарахування] = @enter, [Рік випуску] = @leave," +
+                   "[Напрям підготовки] = @direct, Спеціальність = @spec, [Форма навчання] = @form," +
+                   "[Осв-кв рівень] = @level WHERE Код = '" + Global.studentcode + "'", Connect);
+                comm.Parameters.Add("@group", SqlDbType.VarChar).Value = groupTextBox.Text;
+                comm.Parameters.AddWithValue("@name", SqlDbType.VarChar).Value = nameTextBox.Text;
+                comm.Parameters.AddWithValue("@direct", SqlDbType.VarChar).Value = directTextBox.Text;
+                comm.Parameters.AddWithValue("@spec", SqlDbType.VarChar).Value = specTextBox.Text;
+                comm.Parameters.AddWithValue("@form", SqlDbType.VarChar).Value = formTextBox.Text;
+                comm.Parameters.AddWithValue("@level", SqlDbType.VarChar).Value = levelTextBox.Text;
+                comm.Parameters.AddWithValue("@birth", SqlDbType.DateTime).Value = birthDatePicker.Text;
+                comm.Parameters.AddWithValue("@enter", SqlDbType.DateTime).Value = enterDatePicker.Text;
+                comm.Parameters.AddWithValue("@leave", SqlDbType.DateTime).Value = leaveDatePicker.Text;
+                comm.ExecuteNonQuery();
+                Connect.Close();
+                MessageBox.Show("Зміни успішно збережені!");
+            }
+            catch (Exception exceptionObj)
+            {
+                MessageBox.Show(exceptionObj.Message.ToString());
+            }
+            
 
         }
     }
