@@ -37,9 +37,10 @@
             this.lessonComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.watchButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.saveChanges = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +129,7 @@
             this.watchButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.watchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.watchButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.watchButton.Location = new System.Drawing.Point(30, 341);
+            this.watchButton.Location = new System.Drawing.Point(29, 300);
             this.watchButton.Name = "watchButton";
             this.watchButton.Size = new System.Drawing.Size(211, 34);
             this.watchButton.TabIndex = 8;
@@ -136,18 +137,19 @@
             this.watchButton.UseVisualStyleBackColor = false;
             this.watchButton.Click += new System.EventHandler(this.watchButton_Click);
             // 
-            // button2
+            // saveChanges
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(30, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 34);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Зберегти зміни";
-            this.button2.UseVisualStyleBackColor = false;
+            this.saveChanges.BackColor = System.Drawing.SystemColors.Control;
+            this.saveChanges.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChanges.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveChanges.Location = new System.Drawing.Point(29, 484);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(211, 34);
+            this.saveChanges.TabIndex = 9;
+            this.saveChanges.Text = "Зберегти зміни";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
             // ExitButton
             // 
@@ -157,7 +159,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ExitButton.Location = new System.Drawing.Point(30, 529);
+            this.ExitButton.Location = new System.Drawing.Point(29, 579);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(211, 34);
             this.ExitButton.TabIndex = 10;
@@ -174,16 +176,32 @@
             this.panel1.Size = new System.Drawing.Size(695, 678);
             this.panel1.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(29, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 100);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Увага! Зміни зберігаються тільки для виділеного рядка! Тому після кожних змін у р" +
+    "ядку натискайте кнопку \"Зберегти зміни\"";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(964, 674);
+            this.ClientSize = new System.Drawing.Size(960, 670);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.watchButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lessonComboBox);
@@ -218,8 +236,9 @@
         private System.Windows.Forms.ComboBox lessonComboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button watchButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button saveChanges;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

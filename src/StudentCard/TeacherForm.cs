@@ -107,6 +107,27 @@ namespace StudentCard
 
         }
 
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+                Connect.Open();
+                SqlCommand Command = new SqlCommand("UPDATE StudentMarks SET [Кількість балів] = @mark, [Оцінка за національною шкалою] = @word, [Оцінка за ECTS] = @ects WHERE Група = '" + groupComboBox.SelectedItem + "' AND Предмет = '" + lessonComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "' AND ПІБ = '" + dataGridView.CurrentRow.Cells["ПІБ"].Value + "'", Connect);
+                Command.Parameters.AddWithValue("@mark", dataGridView.CurrentRow.Cells["Кількість балів"].Value);
+                Command.Parameters.AddWithValue("@word", dataGridView.CurrentRow.Cells["Оцінка за національною шкалою"].Value);
+                Command.Parameters.AddWithValue("@ects", dataGridView.CurrentRow.Cells["Оцінка за ECTS"].Value);
+                Command.ExecuteNonQuery();
+                Connect.Close();
+
+                MessageBox.Show("Зміни для виділеного рядочку успішно збережені!");
+            }
+            catch (Exception exceptionObj)
+            {
+                MessageBox.Show(exceptionObj.Message.ToString());
+            }
+        }
+
 
     }
 }
