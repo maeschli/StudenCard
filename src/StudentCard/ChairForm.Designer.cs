@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.saveChanges = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // 
             this.groupComboBox.DropDownWidth = 211;
             this.groupComboBox.FormattingEnabled = true;
-            this.groupComboBox.Location = new System.Drawing.Point(29, 127);
+            this.groupComboBox.Location = new System.Drawing.Point(29, 115);
             this.groupComboBox.Name = "groupComboBox";
             this.groupComboBox.Size = new System.Drawing.Size(211, 26);
             this.groupComboBox.TabIndex = 2;
@@ -79,7 +80,7 @@
             // 
             this.studComboBox.DropDownWidth = 211;
             this.studComboBox.FormattingEnabled = true;
-            this.studComboBox.Location = new System.Drawing.Point(30, 185);
+            this.studComboBox.Location = new System.Drawing.Point(30, 173);
             this.studComboBox.Name = "studComboBox";
             this.studComboBox.Size = new System.Drawing.Size(211, 26);
             this.studComboBox.TabIndex = 3;
@@ -88,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 106);
+            this.label2.Location = new System.Drawing.Point(27, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 4;
@@ -98,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 164);
+            this.label3.Location = new System.Drawing.Point(27, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 5;
@@ -110,7 +111,7 @@
             this.watchInfo.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.watchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.watchInfo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.watchInfo.Location = new System.Drawing.Point(30, 255);
+            this.watchInfo.Location = new System.Drawing.Point(30, 218);
             this.watchInfo.Name = "watchInfo";
             this.watchInfo.Size = new System.Drawing.Size(211, 34);
             this.watchInfo.TabIndex = 9;
@@ -124,7 +125,7 @@
             this.watchMarks.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.watchMarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.watchMarks.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.watchMarks.Location = new System.Drawing.Point(28, 413);
+            this.watchMarks.Location = new System.Drawing.Point(30, 356);
             this.watchMarks.Name = "watchMarks";
             this.watchMarks.Size = new System.Drawing.Size(211, 34);
             this.watchMarks.TabIndex = 10;
@@ -136,7 +137,7 @@
             // 
             this.semestrComboBox.DropDownWidth = 211;
             this.semestrComboBox.FormattingEnabled = true;
-            this.semestrComboBox.Location = new System.Drawing.Point(29, 365);
+            this.semestrComboBox.Location = new System.Drawing.Point(31, 311);
             this.semestrComboBox.Name = "semestrComboBox";
             this.semestrComboBox.Size = new System.Drawing.Size(211, 26);
             this.semestrComboBox.TabIndex = 11;
@@ -144,7 +145,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 344);
+            this.label5.Location = new System.Drawing.Point(28, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 12;
@@ -172,7 +173,7 @@
             this.saveChanges.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.saveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveChanges.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveChanges.Location = new System.Drawing.Point(28, 460);
+            this.saveChanges.Location = new System.Drawing.Point(28, 537);
             this.saveChanges.Name = "saveChanges";
             this.saveChanges.Size = new System.Drawing.Size(211, 34);
             this.saveChanges.TabIndex = 14;
@@ -180,13 +181,30 @@
             this.saveChanges.UseVisualStyleBackColor = false;
             this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(30, 413);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 100);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Увага! Зміни зберігаються тільки для виділеного рядка! Тому після кожних змін у р" +
+    "ядку натискайте кнопку \"Зберегти зміни\"";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ChairForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(968, 678);
+            this.ClientSize = new System.Drawing.Size(964, 674);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label5);
@@ -228,5 +246,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button saveChanges;
+        private System.Windows.Forms.Label label1;
     }
 }

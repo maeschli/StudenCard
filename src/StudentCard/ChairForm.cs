@@ -14,6 +14,8 @@ namespace StudentCard
 {
     public partial class ChairForm : Form
     {
+        private SqlDataAdapter adaptStData = null;
+        private DataTable table = null;
         public ChairForm()
         {
             InitializeComponent();
@@ -100,16 +102,16 @@ namespace StudentCard
         {
             SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
             Connect.Open();
-            SqlDataAdapter adaptStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Connect);
+            adaptStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Connect);
 
             using (adaptStData)
             {
-                DataTable t = new DataTable();
-                adaptStData.Fill(t);
+                table = new DataTable();
+                adaptStData.Fill(table);
 
                 dataGridView.AutoSize = true;
 
-                dataGridView.DataSource = t;
+                dataGridView.DataSource = table;
 
                 dataGridView.Columns[0].Visible = false;
                 dataGridView.Columns[1].Visible = false;
@@ -121,31 +123,28 @@ namespace StudentCard
 
         private void saveChanges_Click(object sender, EventArgs e)
         {
-            SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
-            Connect.Open();
-            SqlDataAdapter adaptStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Connect);
-
-            using (adaptStData)
+            try
             {
-                SqlConnection Conn = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
-                Conn.Open();
-                SqlDataAdapter adStData = new SqlDataAdapter("SELECT * from StudentMarks WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "'", Conn);
-                
-                /*DataTable t = new DataTable();
-                adaptStData.Fill(t);
+                SqlConnection Connect = new SqlConnection("Data Source=MASHABOROVIK-ПК\\SQLEXPRESS;Initial Catalog=D:\\02_BERUF\\BERUF_GITHUB\\STUDENCARD\\DOC\\STUDENTCARD.MDF;Integrated Security=True");
+                Connect.Open();
+                SqlCommand Command = new SqlCommand("UPDATE StudentMarks SET [Кількість балів] = @mark, [Оцінка за національною шкалою] = @word, [Оцінка за ECTS] = @ects WHERE Група = '" + groupComboBox.SelectedItem + "' AND ПІБ = '" + studComboBox.SelectedItem + "' AND Семестр = '" + semestrComboBox.SelectedItem + "' AND Предмет = '" + dataGridView.CurrentRow.Cells["Предмет"].Value + "'", Connect);
+                Command.Parameters.AddWithValue("@mark", dataGridView.CurrentRow.Cells["Кількість балів"].Value);
+                Command.Parameters.AddWithValue("@word", dataGridView.CurrentRow.Cells["Оцінка за національною шкалою"].Value);
+                Command.Parameters.AddWithValue("@ects", dataGridView.CurrentRow.Cells["Оцінка за ECTS"].Value);
+                Command.ExecuteNonQuery();
+                Connect.Close();
 
-                dataGridView.AutoSize = true;
-
-                dataGridView.DataSource = t;
-
-                dataGridView.Columns[0].Visible = false;
-                dataGridView.Columns[1].Visible = false;
-                dataGridView.Columns[2].Visible = false;
-                dataGridView.Columns[3].Visible = false;*/
-
-                Conn.Close();
+                MessageBox.Show("Зміни для виділеного рядочку успішно збережені!");
             }
-            Connect.Close();
+            catch (Exception exceptionObj)
+            {
+                MessageBox.Show(exceptionObj.Message.ToString());
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
