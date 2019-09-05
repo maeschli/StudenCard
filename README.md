@@ -1,2 +1,2 @@
 # StudentCard
-This is StudentCard project for distributed databases, created for DNU
+This is StudentCard project for distributed databases, created for Dnipro National University
